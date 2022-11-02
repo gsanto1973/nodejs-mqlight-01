@@ -90,21 +90,21 @@ C:\Program Files\IBM\MQ>runmqsc QM1<"C:\Users\cargs\Downloads\mq-dev-config.mqsc
 Se está iniciando MQSC para el gestor de colas QM1.
 
 
-       : * ┬® Copyright IBM Corporation 2018
-       : *
-       : *
-       : * Licensed under the Apache License, Version 2.0 (the "License");
-       : * you may not use this file except in compliance with the License.
-       : * You may obtain a copy of the License at
-       : *
-       : * http://www.apache.org/licenses/LICENSE-2.0
-       : *
-       : * Unless required by applicable law or agreed to in writing, software
-       : * distributed under the License is distributed on an "AS IS" BASIS,
-       : * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-       : * See the License for the specific language governing permissions and
-       : * limitations under the License.
-       :
+: * ┬® Copyright IBM Corporation 2018
+: *
+: *
+: * Licensed under the Apache License, Version 2.0 (the "License");
+: * you may not use this file except in compliance with the License.
+: * You may obtain a copy of the License at
+: *
+: * http://www.apache.org/licenses/LICENSE-2.0
+: *
+: * Unless required by applicable law or agreed to in writing, software
+: * distributed under the License is distributed on an "AS IS" BASIS,
+: * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+: * See the License for the specific language governing permissions and
+: * limitations under the License.
+:
      1 : STOP LISTENER('SYSTEM.DEFAULT.LISTENER.TCP') IGNSTATE(YES)
 AMQ8706I: Se ha aceptado la petición para detener el escucha de IBM MQ.
        :
@@ -286,3 +286,46 @@ Para crear un canal AMQP, se debe:
   luego, no se puede ejecutar y subir el canal amqp, por ejemplo:
       START CHANNEL(MY.AMQP.CHANNEL)
   indica error.
+
+
+Proceso de instalación programa node js
+---------------------------------------
+
+Se debe descargar el código fuente de GIT en alguna carpeta y se descomprime.
+
+Se debe abrir un CMD dentro de esta carpeta y se ingresa en la carpeta nodejs-mqlight-01-main.
+
+En esta carpeta se debe ejecutar:
+   npm i
+Con esto se instalan todas las librerias o dependencias necesarias por el programa indicadas en el archivo package.json.
+Esto también se puede realizar desde el editor Visual Estudio Code, entrando al proyecto y en una terminal integrado desde la carpeta nodejs-mqlight-01-main y se ejecuta la misma instrucción.
+
+Se puede ejecutar el código en modo desarrollo (nodemon ...) ejecutando en la terminal integrada lo siguiente:
+   npm run dev
+
+Se puede ejecutar el código en modo producción (node ...) ejecutando en la terminal integrada lo siguiente:
+   npm run start
+
+
+
+Funcionamiento del programa node js
+---------------------------------------
+
+El código presenta una página donde se puede capturar un mensaje y se envía a la cola subscrita.
+Los datos de conexión son:
+Servidor: localhost
+Usuario: app
+Password: passw0rd
+Puerto: 1414
+Estos datos corresponden al servidor local.
+
+Cuando el programa está en ejecución, se abre el navegador de internet en la dirección:
+http://localhost:3003/
+Con esto se muestra la página donde se escribe el mensaje y se envía a través del botón Enviar.
+Esto levanta el metodo que se conecta a la cola y le envía el mensaje.
+Si se presenta un error en el proceso de conexión, este se muestra en consola.
+Si se entra a la dirección:
+http://localhost:3003/messages
+Se muestra una página donde se muestran los mensajes de la cola, a los cuales se subscribió.
+
+
