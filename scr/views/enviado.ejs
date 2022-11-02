@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Broker - Enviar mensaje</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <h1>Prueba Broker - Enviar mensaje</h1>
+    <div class="contenedor">
+        <div>
+            <h4>Parámetros de conexión</h4>
+            <h5>service: <%=service%>
+            </h5>
+            <h5>user: <%=user%>
+            </h5>
+            <h5>password: <%=password%>
+            </h5>
+            <h5>port: <%=portBK%>
+            </h5>
+        </div>
+        <form action="/" method="POST">
+            <div>
+                <br>
+                <label for="Mensaje">Mensaje</label>
+                <br>
+                <input type="text" name="txtMensaje" id="txtMensaje" placeholder="Mensaje">
+            </div>
+            <br>
+            <button type="submit" id="btnEnviar">Enviar</button>
+        </form>
+    </div>
+    <div>
+        <h4>Este es el mensaje enviado <%=errorPantalla%>
+        </h4>
+    </div>
+</body>
+
+</html>

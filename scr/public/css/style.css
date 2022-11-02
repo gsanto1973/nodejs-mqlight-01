@@ -1,0 +1,50 @@
+body, html {
+    background-color: rgb(148, 150, 151);
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor {
+    background-color: rgb(212, 212, 211);
+    margin: auto;
+    width: 50%;
+    padding: 2%;
+    border-radius: 3%;
+}
+
+#txtMensaje {
+    width: 90%;
+    border-radius: 3%;
+    outline: none;
+    padding: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btnEnviar {
+    width: 100px;
+    padding: 5px;
+    background-color: rgb(161, 160, 160);
+    color: rgb(47, 47, 48);
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btnEnviar:hover {
+    background-color: rgb(75, 75, 75);
+    color: rgb(210, 209, 209);
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4, h5 {
+    margin: 0;
+    padding: 0;
+}
