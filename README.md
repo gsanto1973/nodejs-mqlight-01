@@ -1,4 +1,4 @@
-#IBM MQ Mesaage broker
+#IBM MQ Message broker
 
 Proceso de instalación
 
@@ -8,10 +8,9 @@ https://developer.ibm.com/tutorials/mq-connect-app-queue-manager-windows/#step-1
 Se debe descomprir y luego se ejecuta el siguiente comando - se reemplazan las rutas:
 start /wait msiexec /i "C:\Users\cargs\Downloads\mqadv_dev930_windows\MQServer\MSI\IBM MQ.msi" /l*v "C:\Users\cargs\install.log" /q RESPONSE="C:\Users\cargs\Downloads\mqadv_dev913_windows\MQServer\Response.ini" TRANSFORMS="1033.mst" AGREETOLICENSE="yes" ADDLOCAL="Server"
 
-Se debe ejecutar como administrador en un CMD
-Luego de instalar se prueba con:
+Luego de instalar se prueba abriendo un CMD como administrador y se ejecuta:
 echo %ERRORLEVEL%
-debe devolver 0
+debe devolver 0, indicando que la instalación fue éxitosa.
 
 Luego se instala el MQ Explorer de IBM
 Se debe crear una cuenta gratuita de IBM, se ingreso con LINKEDIN, o sea con giordano.santos.otero@gmail.com y su clave
@@ -23,11 +22,6 @@ Se creó el IMB identificador - IBMid = giordano.santos.otero@gmail.com
 -- esto no se terminó de instalar porque pide una autenticación que falló, se descragó en el celular IBM security verify, se escaneó la qr -- desde la página de autebticación de la cuenta de IBM, en la pestaña perfil.
 Se había descargado el MQ Explorer en la carpeta downloaddirector y no en download, se instala y se ejecuta.
 
-
-se crea el gestor de colas QM_NODE01
-se usa el puerto 1415, para dejar el 1414 al ejemplo inicial QM1
-se crea la cola Q_NODE01
---------------------------------------------------------------------
 
 Para crear una cola, primero se debe crear el gestor o sea el servidor que tendra la cola
 
