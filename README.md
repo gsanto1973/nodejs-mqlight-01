@@ -1,6 +1,7 @@
 #IBM MQ Message broker
 
-Proceso de instalación
+Proceso de instalación IBM MQ
+-----------------------------
 
 El instalador de IBM MQ se descarga de la dirección:
 https://developer.ibm.com/tutorials/mq-connect-app-queue-manager-windows/#step-1-download-ibm-mq
